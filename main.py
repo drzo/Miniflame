@@ -59,6 +59,12 @@ def process_large_file():
     result = model_handler.process_large_file()
     return jsonify({'message': result})
 
+@app.route('/test_optimized_model', methods=['POST'])
+def test_optimized_model():
+    input_text = request.json['input_text']
+    output = model_handler.generate_response(input_text)
+    return jsonify({'response': output})
+
 @app.route('/test_slack')
 def test_slack():
     channel_ids = slack_integration.get_channel_ids()
