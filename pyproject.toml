@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "repl-nix-miniflame"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+ctranslate2 = "^4.3.1"
+sentencepiece = "^0.2.0"
+transformers = "^4.44.2"
+slack-sdk = "^3.32.0"
+torch = "^2.4.1"
+accelerate = "^0.34.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

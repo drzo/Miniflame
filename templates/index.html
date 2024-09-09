@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGUF LLM Handler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>GGUF LLM Handler</h1>
+        <form id="input-form">
+            <textarea id="input-text" placeholder="Enter your text here..." rows="4"></textarea>
+            <button type="submit" id="submit-btn">Generate Response</button>
+        </form>
+        <div id="output"></div>
+        <div id="file-upload">
+            <h2>Upload Large File</h2>
+            <input type="file" id="file-input">
+            <button id="upload-btn">Upload and Process</button>
+            <div id="upload-status"></div>
+        </div>
+        <div id="model-info">
+            <h2>Model Information</h2>
+            <div id="model-stats"></div>
+            <div id="model-structure">
+                <h3>Model Structure</h3>
+                <!-- D3.js visualization will be inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
